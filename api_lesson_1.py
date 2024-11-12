@@ -1,12 +1,12 @@
 import requests
 
 
-BASE_URL = "https://wttr.in/{}?nTqmM&lang=ru"
+URL = "https://wttr.in/{}?nTqmM&lang=ru"
 CITIES = ["Лондон", "Шереметьево", "Череповец"]
 
 
 def get_weather(city):
-    url = BASE_URL.format(city)
+    url = URL.format(city)
     response = requests.get(url)
     response.raise_for_status()
     return response.text
