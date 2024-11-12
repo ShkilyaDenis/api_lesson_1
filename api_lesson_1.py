@@ -3,7 +3,7 @@ import requests
 
 URL = "https://wttr.in/"
 CITIES = ["Лондон", "Шереметьево", "Череповец"]
-payload = {
+PAYLOAD = {
         "n": "",
         "T": "",
         "q": "",
@@ -14,7 +14,7 @@ payload = {
 
 
 def get_weather(city):
-    response = requests.get(URL + city, params=payload)
+    response = requests.get(URL + city, params=PAYLOAD)
     response.raise_for_status()
     return response.text
 
